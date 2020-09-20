@@ -1,6 +1,6 @@
 安装问题记录：
 
-1. installation from PyPi:
+1. installation from PyPi (recommended):
 
    ```shell
    pip install evo --upgrade --no-binary evo
@@ -53,6 +53,24 @@
    sudo pip install --editable . --upgrade --no-binary evo
    ```
 
+3. Plot multiple trajectories Error
+
+   ```shell
+   cd test/data
+   evo_traj kitti KITTI_00_ORB.txt KITTI_00_SPTAM.txt --ref=KITTI_00_gt.txt -p --plot_mode=xz
+   ```
+
+   (1) Error report:
+
+   ![](./doc/kyle/error2.png)
+
+   Solution:
+
+   ```shell
+   pip install matplotlib --upgrade --user
+   pip install numpy --upgrade --user
+   ```
+
    
 
-3. 
+4. 
